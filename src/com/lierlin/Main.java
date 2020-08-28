@@ -2,7 +2,6 @@ package com.lierlin;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.io.File;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.Driver;
@@ -90,7 +89,7 @@ public class Main {
     }
 
     public  static void jdbc5() throws Exception{
-       InputStream is = Main.class.getClassLoader().getResourceAsStream("com/lierlin/jdbc.properties");
+       InputStream is = Main.class.getClassLoader().getResourceAsStream("com/lierlin/Resource/jdbc.properties");
        Properties pros = new Properties();
        pros.load(is);
        String user = pros.getProperty("user");
