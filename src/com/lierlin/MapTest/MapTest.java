@@ -3,10 +3,12 @@ package com.lierlin.MapTest;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class MapTest {
     public static void main(String[] args) {
         Map<String,String> map = new HashMap<>();
+        Map map1 = new ConcurrentHashMap(32);
         for (int i = 0; i < 4; i++) {
         map.put("map"+i,"map"+i);
         }
