@@ -1,0 +1,245 @@
+http://zyys.donghuajinyun.com/zxsvn/repo/yjszx/   这个svn路径下  有个百瑞/brcrp2
+htpasswd -b /disk/appdata/svnroot/project/passwd lierlin 9sdf0qw
+http://127.0.0.1:8080/hnitp/sys/dhcc_login.jsp
+00307010120036877308001
+C:\Users\lierlin\Workspaces\MyEclipse 10
+svn://47.105.216.33/new_cri_web_v1
+svn://47.105.216.33/CRSWEB
+-Xmx1024m
+-XX:MaxPermSize=1024m
+-XX:ReservedCodeCacheSize=64m
+
+
+http://127.0.0.1:8080/cri/CreateMessageServlet
+
+admin001	000000pp        tblorguser  s_user_info    BatchMain
+SELECT * FROM G_ASSEMBLE_INFO a WHERE a.step_id='EAJL41004';
+
+UPDATE S_DATE_INFO T SET T.LST_DATE = '20200723', T.SYS_DATE = '20200724',T.CPSYS_DATE='20200724',T.CCSYS_DATE='20200724',T.SYS_IND='20200725';
+COMMIT;
+
+SELECT * FROM s_org_info a WHERE a.br_no='01011';
+
+UPDATE S_DATE_INFO T SET T.LST_DATE = '20200723', T.SYS_DATE = '20200724',T.CPSYS_DATE='20200724',T.CCSYS_DATE='20200724',T.SYS_IND='20200725';
+COMMIT;
+
+TRUNCATE TABLE G_EXECUTE_INFO;
+
+TRUNCATE TABLE G_EXECUTE_INFO;
+
+TRUNCATE TABLE G_EXECUTE_INFO;
+UPDATE S_DATE_INFO t  SET t.LST_DATE='20200723',t.sys_date='20200724' ;
+COMMIT;
+
+获取跑批的系统时间    ->SELECT SYS_DATE FROM S_DATE_INFO拿到SYS_DATE
+获取系统时间表的结束信息 ->SELECT SYS_IND FROM S_DATE_INFO拿到SYS_IND
+获取批量配置表中开始节点 ->  SELECT STEP_ID FROM G_ASSEMBLE_INFO WHERE STEP_LEV ='0' AND JOB_ID='EBJP310'
+取征信批量日期	    ->   SELECT SYS_DATE,CCSYS_DATE,CPSYS_DATE FROM S_DATE_INFO
+在G_ASSEMBLE_INFO取头结点任务的 step_id   ->SELECT STEP_ID,STEP_RELAID,STEP_LEV,STEP_STS FROM G_ASSEMBLE_INFO WHERE STEP_LEV ='0' AND STEP_STS='1' AND JOB_ID ='EBJP310'
+循环执行子节点，若执行成功继续执行子节点任务    一、判断查询是否有失败的步骤 如果失败 ->SELECT STEP_ID FROM G_EXECUTE_INFO WHERE EXECUTE_STS='2' AND batch_date=?
+						判断是否是第一次执行   
+							获取数据库配置表中相关的SQL语句 ->SELECT STEP_ID,STEP_RELAID,STEP_DESC,TO_CLOB(SQL_ASSEMBLED)||' '||TO_CLOB(SQL_ASSEMBLED_ADD)||' '||TO_CLOB(SQL_ASSEMBLED_ADD1) AS SQL_ASSEMBLED,STEP_STS,STEP_LEV FROM G_ASSEMBLE_INFO WHERE STEP_ID=?
+								取此步骤的执行状态 ,看该结点的小步任务是否已经执行成功->SELECT BATCH_DATE,STEP_ID,EXECUTE_STS FROM G_EXECUTE_INFO WHERE "+ "STEP_ID=? AND BATCH_DATE=?
+									如果sql执行结果不为空,flag=true->UPDATE G_EXECUTE_INFO SET EXECUTE_STS='3',START_TIME=? WHERE STEP_ID=? AND BATCH_DATE=?
+									如果sql执行结果为空 ，将小步任务插入 批量跑批执行表
+driver是数据库厂商提供的一个实现类
+jdbc是sun公司提供的一组规范（java如何操作数据库）api，
+对应数据库厂商提供对应的驱动也就是用driver来实现jdbc接口
+把多个实现类的集合封装到一起就叫做驱动（驱动其实就是一些实现jdbc的实现类集合）
+driverManiger是sun公司提供的一个类。如果想要使用也要创建数据库厂商提供的实现类（驱动）对象
+statement是一个接口 preparedstatemetn是statement接口的一个子接口 createstatement是connection接口的一个方法
+prepareadStatement操作Blob的数据，而Statement做不到，也可以实现高效的批量操作
+
+mysql底层是b+树  b树符合二分查找到是输入的值如果是123456就变成了链表
+平衡二叉树就解决了这个问题（最短子树和最长子树的差不能大于1）b+树的所有叶子节点都有一个双向链表
+回表：一个表中带有数据的B+树只有一个可有有多个b+树（其它的索引带的是主键值）普通索引遍历的时候会得到索引对应的主键值，然后再去主键索引中去查找数据整个过程叫回表；
+索引覆盖：用索引查询时不回表的过程就叫索引覆盖（select primkey, name from tablename where name="lierlin"）这里name是索引，primkey也是索引就不需要回表
+索引引用的数据结构=哈希表+B+树  尽量使用主键进行查询，因为主键不会回表 ，经常更新的字段不建议加索引
+Spring封装了RedisTemplate对象来进行对Redis的各种操作，它支持所有的Redis原生的api。RedisTemplate位于spring-data-redis包下。
+redisTemplate.opsForValue();//操作字符串
+redisTemplate.opsForHash();//操作hash
+redisTemplate.opsForList();//操作list
+redisTemplate.opsForSet();//操作set
+redisTemplate.opsForZSet();//操作有序set
+在指定的时间间隔内将内存中的数据集快照写入磁盘，也就是行话说的snapshot快照，他恢复时是将快照直接读到内存里
+aof默认是关闭的如果打开它会自动记录你操作redis的命令，回复的时候直接读取你之前的命令即可
+1.什么是Spring框架? Spring框架有哪些主要模块?
+2.为什么要用Spring? 使用Spring框架能带来哪些好处?
+3.什么是控制反转(IOC)? 什么是依赖注入(DI)? 
+4.AOP是什么? 有哪些实现方式?
+5.工具类中如何注入bean？具体使用场景？
+6.BeanFactory和ApplicationContext有什么区别?
+7.请解释Spring Bean的生命周期?
+8.Spring Bean的各种作用域之间有什么区别?
+9.Spring Bean作用域有哪些? 说一下各种使用场景.
+10.Spring框架中的单例Beans是线程安全的么? - singleton(单例) / prototype(多个状态)
+11.Spring框架中都用到了哪些设计模式？
+12.Spring 是如何管理事务的？
+13.Spring 的不同事务传播行为有哪些，干什么用的？
+14.Resource 是如何被查找、加载的？
+rabbitMq的工作模式：1.简单模式 一个生产者，一个消费者
+		2.work模式   一个生产者，多个消费者，每个消费者获取到的消息唯一
+		3.订阅模式     一个生产者发送的消息会被多个消费者获取
+		4.路由模式    发送消息到交换机并且要指定路由key，消费者将队列绑定到交换机时需要指定路由key
+		5.topic模式  将路由键和某模式进行匹配，此时队列需要绑定在一个模式上，“#”匹配一个词或多个词，“*”只匹配一个词
+		6.heard模式  和Routing模式的不同就是取消了routing使用键值对的方式作为routing。
+getinstance是已经有了一个instance，你使用方法获取到这个对象。
+newinstance是没有这个对象，你使用构造方法创建一个对象出来。 
+StringUtils.leftPad(Str,int,"*")在字符串str的的填充*，int=*的个数+str.size()
+//删除字符串开始匹配的指定字符串  
+StringUtils.removeStart("www.domain.com", "www.")  = "domain.com"
+一个接口中z只有一个抽象方法，则该接口成为函数似接口，函数似接口可以使用lambda表达式。
+Arrays.toString（arr）直接输出数组不用一个一个的遍历
+java的四种引用：强软弱虚 强引用只要有引用指向对象就算内存抛出out of m 也不会回收
+		软引用：需要引入java.lang.ref.SoftReference  SoftReference<byte[]> bit = new  SoftReference<>(new byte[1024*1024*10]);当内存空间不够的时候会回收
+		弱引用：需要引入java.lang.ref.WeakReference  WeakReference<M>m = new WeakReference<>(new M());回收垃圾机制看到之后就会回收 m.get()就可以拿到*引用 当一个对象仅仅被weak reference指向, 而没有任何其他strong reference指向的时候, 如果GC运行, 那么这个对象就会被回收 	
+		ThreadLocal<M> tl = new ThreadLocal<>();(当ThreadLocal set东西的时候首先找到当前线程指向的一个map（ThreadlocalMap:ThreadLocalMap其实就是ThreadLocal的一个静态内部类，里面定义了一个Entry来保存数据，而且还是继承的弱引用。在Entry内部使用ThreadLocal作为key，使用我们设置的value作为value。）
+		把这个threadlocal作为一个key，set的东西作为一个value,threadlocal是一个弱引用指向的ThreadLocal)
+				tl.set(new M());
+				tl.remove();
+		虚引用：PhantomReference<M> phantomreference = new PhantomReference<>(new M(),QUEUE);虚引用找不到虚引用指向的对象,作用就是当虚引用指向的对象回收时通知一下把信息写到queue队列中（作用：管理堆外内存）
+微服务面向的是系统机构设计方式，分布式面向的是系统部署方式	
+jvm=堆+虚拟机栈+本地方法栈+程序计数器+方法区（元空间）其中中间三个是线程私有
+虚拟机栈=多个栈帧组成=局部变量表+操作数栈+方法出口+动态链接	
+程序计数器=指向当前线程所执行的字节码指令的（地址）行号。
+本地方法栈：jvm单独列出的区域来处理c或c++调用的接口（jnI）
+        String name = request.getParameter("name");
+        System.out.println("前台传入参数：" + name);
+        name  = new String(name.getBytes("ISO-8859-1"),"UTF-8");
+        System.out.println("经过解码后参数：" + name);
+构造函数用public 和private修饰有什么区别：private 只能自己访问，这样的情况下，其他类不能直接调用该类生成新的对象，也就避免了同一个类被反复创建的情况，这种情况下，该类只有一个对象实例
+突然我们ThreadLocal是null了，也就是要被垃圾回收器回收了，但是此时我们的ThreadLocalMap生命周期和Thread的一样，它不会回收，这时候就出现了一个现象。那就是ThreadLocalMap的key没了，但是value还在，这就造成了内存泄漏。
+解决办法：使用完ThreadLocal后，执行remove操作，避免出现内存溢出情况。
+ThreadLocal的具体作用有下四点
+1、在进行对象跨层传递的时候，使用ThreadLocal可以避免多次传递，打破层次间的约束。
+2、线程间数据隔离
+3、进行事务操作，用于存储线程事务信息。
+4、数据库连接，Session会话管理。
+1. 介绍一下你在项目中所做的模块。
+2. 单点登录的原理，你们jwt中包含哪些信息？
+3. Feign客户端的远程调用是怎么实现的?协议是什么？Hystrics熔断保护的实现原理？
+4. Redis的有哪些模式？
+5. 项目中的搜索功能是怎么实现的？ES+kibana  ik分词
+6. MQ怎么知道消息被指定的消费者消费？怎么使不同的生产者生产的消息被不同的消费者消费？
+1. 引入第三方登录时，怎么使得你自己的token和第三方的token关联起来？
+2. 讲一下为什么JVM要分为堆、方法区等？原理是什么？
+3. GC算法都有哪些？他们之间的区别是什么？各自的适用场景？
+4. 讲一下Servlet是什么东西？
+5. Spring和springboot的区别？
+6. Redis的击穿、雪崩和穿透讲一下。
+1、String有最大长度限制吗？
+2、mysql对哪些建立索引？调优
+3、mq中一条消息出现了异常，怎么处理
+4、spring有哪些常用注解？（我一紧张说了springboot的注解）
+5、elasticsearch的主从、字符串类型是哪个、nested类型是什么、聚合怎么写、查询某个id的语句、创建es的索引、时间类型怎么存的（我说了个utc...他说utc的话你的时间得+8，我蒙了）
+6、int a = 1;jvm如何取得a的值
+7、知道哪些设计模式？
+8、mq1000个消息始终不被消费怎么处理（我说不处理...她笑了）
+9、捕获异常在catch块里一定会进入finally吗？catch里能return吗？catch里return还会进finally吗？在try里return呢是什么情况？
+10、jvm调优调的哪些参数？我说初始堆大小和最大堆大小一样，问这样有什么好处？在哪里写这些参数
+11、redis主从原理
+12、知道哪些锁？公平锁和非公平锁区别？可重入锁是什么？我说是sychronized里还有个synchronized
+第一范式是基本要求，即每个列都是不可分割的数据项， 如果连这个都满足不了，还是洗洗睡吧。
+第二范式要求实体属性要完全依赖主键，不能依赖部分主键。
+第三范式就是一个表中不能包含其它表中已包含的非主关键字信息。不严谨地说就是这个表只包含其他表的ID。
+一段代码块内如果对共享资源的多线程读写操作，称这段代码块为临界区 
+阻塞式的解决方案：synchronized,lock 非阻塞式的解决方案：原子变量。synchronized可以避免临界区的竞态条件发生，synshronized俗称对象锁，它采用互斥的方式 让同一时刻只能有一个线程持有对象锁，其它
+的线程在想获得这个锁时就会阻塞，这样就能保证获得锁的线程能够安全的执行临界区的代码，不用担心上下文切换
+synchronized实际使用对象锁保证了临界区的原子性，
+synchronized写在方法上相当于锁住的时this对象 public synchronized void a(){*******}== public void a(){synchronized(this){*****}}
+synchronized写在静态方法上相当于锁住的时类对象 public synchronized static void a(){*****}==public static void a(){synchronized(类名.class){***********}}
+一个对象只能通过对象头中的markword去关联一个Monitor(owner(锁对象拥有者)，EntryList(阻塞的线程)，waitSet（存放waite状态的线程队列）Count(用来记录该线程获取锁的状态))
+锁膨胀就是线程对对象从轻量级锁转换为moniter(重量级锁)的过程
+正在等待当前线程锁的其它线程在进入排队的时候时不时的去看一眼当前线程有没有忙完（自旋）
+synchronized默认使用的时轻量级锁，轻量级锁发生抢占的时候会升级为重锁，然后后面需要阻塞的进程可以根据自旋来尽量减少阻塞
+轻量级锁进一步优化就会变成偏向锁：只用第一次使用cas将线程id设置到对象的Mark Word头 之后发现这个线程Id时自己的就表示没有竞争，不用重新CAS。以后只要不发生竞争，这个对象就归该线程所有
+对象头=MarkWord+实例变量+填充数据
+markword存储对象的hashCode、锁信息或分代年龄或Gc标志信息等。
+实例变量（Class Metadata Address）类型指针指向对象的类元数据，jvm通过这个指针确定该对象是哪个实例
+填充数据：由于jvm虚拟机要求对象起始地址必须是8字节的整数倍。填充数据是不必须存在的，仅仅是为了字节对齐。
+当一个线程访问被synchronized加锁后的对象时obj(这个对象中的MarkWord)试图和操作系统提供的Monitor去相关联，MarkWord通过指针地址指向monitor对象。就是在MarkWord中记录了Monitor的指针地址将来就可以根据指针找到monitor对象
+同一个对象都会和同一个monitor相互关联
+创建锁记录对象，每个线程的栈帧都会包含一个锁记录对象，内部机构可以存储锁定对象的markWard Thread-0->(Lock Record{1.Object Reference对象的地址，锁住对象一定要知道对象的地址，2.记录对象的MarkWard->前面30位记录锁的地址（就是记录monitor的地址），
+后两位记录锁的级别00代表轻量级，10代表重量级，01代表没有加锁})线程中的lock Record和对象中的Markword相换。线程中记录hashcode,分代年龄.....就称为cas操作。cas操作是个原子操作不会被打断
+JVM对Synchronized的优化，简单来说解决三种场景：
+1）只有一个线程进入临界区，偏向锁
+2）多个线程交替进入临界区，轻量级锁
+3）多线程同时进入临界区，重量级锁
+所以说Monitor对象只是实现sychronized对象的其中一部分（重量级锁部分）。
+当多个线程同时访问一段同步代码时，首先会进入_EntryList队列中，当某个线程获取到对象的monitor后进入_Owner区域并把monitor中的_owner变量设置为当前线程，
+同时monitor中的计数器_count加1，若线程调用wait()方法，将释放当前持有的monitor，_owner变量恢复为null，_count自减1，同时该线程进入_WaitSet集合中等待被唤醒。
+若当前线程执行完毕也将释放monitor(锁)并复位变量的值，以便其他线程进入获取monitor(锁)
+（一）偏向锁(当执行第一次cas操作时把线程的ID设置到mardWard中，之后线程发现这个线程id是自己的就不需要在去执行cas操作，只要不发生竞争这个对象就归该线程所有)
+当对象头中的偏向锁状态为1时代表开启了偏向锁这时前面的就不是hashcode了，前面存储的是线程ID
+引入偏向锁的主要原因是，经过研究发现，在大多数情况下，锁不仅不存在多线程竞争，而且总是由同一线程多次获得，因此为了减少同一线程获取锁(会涉及到一些CAS操作,耗时)的代价而引入偏向锁。
+引入的主要目的是，为了在无多线程竞争的情况下尽量减少不必要的轻量级锁执行路径。因为轻量级锁的获取及释放依赖多次CAS原子指令，而偏向锁只需要在置换ThreadID的时候依赖一次CAS原子指令（由于一旦出现多线程竞争的情况就必须撤销偏向锁，所以偏向锁的撤销操作的性能损耗必须小于节省下来的CAS原子指令的性能消耗）。
+偏向锁的核心思想是，如果一个线程获得了锁，那么锁就进入偏向模式，此时Mark Word 的结构也变为偏向锁结构，当这个线程再次请求锁时，无需再做任何同步操作，即获取锁的过程，这样就省去了大量有关锁申请的操作，从而也就提升程序的性能。所以，对于没有锁竞争的场合，偏向锁有很好的优化效果，毕竟极有可能连续多次是同一个线程申请相同的锁。
+但是对于锁竞争比较激烈的场合，偏向锁就失效了，因为这样场合极有可能每次申请锁的线程都是不相同的，因此这种场合下不应该使用偏向锁，否则会得不偿失，需要注意的是，偏向锁失败后，并不会立即膨胀为重量级锁，而是先升级为轻量级锁。
+其执行流程为：
+获取锁
+    ①检测Mark Word是否为可偏向状态，即是否为偏向锁1，锁标识位为01；
+    ②若为可偏向状态，则测试线程ID是否为当前线程ID，如果是，则执行步骤(5)，否则执行步骤(3)；
+    ③如果线程ID不为当前线程ID，则通过CAS操作竞争锁，竞争成功，则将Mark Word的线程ID替换为当前线程ID，否则执行线程(4)；
+    ④通过CAS竞争锁失败，证明当前存在多线程竞争情况，当到达全局安全点，获得偏向锁的线程被挂起，偏向锁升级为轻量级锁，然后被阻塞在安全点的线程继续往下执行同步代码块；
+    ⑤执行同步代码块
+释放锁
+偏向锁的释放采用了一种只有竞争才会释放锁的机制，线程是不会主动去释放偏向锁，需要等待其他线程来竞争。偏向锁的撤销需要等待全局安全点（这个时间点是上没有正在执行的代码）。其步骤如下：
+    ①暂停拥有偏向锁的线程，判断锁对象石是否还处于被锁定状态；
+    ②撤销偏向锁，恢复到无锁状态(01)或者轻量级锁的状态；
+那么轻量级锁和偏向锁的使用场景为：
+轻量级锁是为了在线程交替执行同步块时提高性能，而偏向锁则是在只有一个线程执行同步块时进一步提高性能。
+（二）轻量级锁（轻量锁不需要monitor对象，用的是线程栈中的锁记录，缺点：发生锁重入的时候仍然需要cas操作->cas操作就是用线程中的锁记录替换对象头中的markWard）
+引入轻量级锁的主要原因是，对绝大部分的锁，在整个同步周期内都不存在竞争，可能是交替获取锁然后执行。(与偏向锁的区别是，引入偏向锁是假设同一个锁都是由同一线程多次获得，而轻量级锁是假设同一个锁是由n个线程交替获得；相同点是都是假设不存在多线程竞争)
+引入轻量级锁的主要目的是，在没有多线程竞争的前提下，减少传统的重量级锁使用操作系统互斥量产生的性能消耗(多指时间消耗)。
+触发轻量级锁的条件是当关闭偏向锁功能或者多个线程竞争偏向锁导致偏向锁升级为轻量级锁，则会尝试获取轻量级锁，此时Mark Word的结构也变为轻量级锁的结构。如果存在多个线程同一时间访问同一锁的场合，就会导致轻量级锁膨胀为重量级锁。
+其步骤如下：
+获取锁
+    判断当前对象是否处于无锁状态（hashcode、0、01），若是，则JVM首先将在当前线程的栈帧中建立一个名为锁记录（Lock Record）的空间，用于存储锁对象目前的Mark Word的拷贝（官方把这份拷贝加了一个Displaced前缀，即Displaced Mark Word）；否则执行步骤（3）；
+    JVM利用CAS操作尝试将对象的Mark Word更新为指向Lock Record的指针，如果成功表示竞争到锁，则将锁标志位变成00（表示此对象处于轻量级锁状态），执行同步操作；如果失败则执行步骤（3）；
+    判断当前对象的Mark Word是否指向当前线程的栈帧，如果是则表示当前线程已经持有当前对象的锁，则直接执行同步代码块；否则只能说明该锁对象已经被其他线程抢占了，这时轻量级锁需要膨胀为重量级锁，锁标志位变成10，后面等待的线程将会进入阻塞状态；
+释放锁
+轻量级锁的释放也是通过CAS操作来进行的，主要步骤如下：
+    取出在获取轻量级锁保存在Displaced Mark Word中的数据；
+    用CAS操作将取出的数据替换当前对象的Mark Word中，如果成功，则说明释放锁成功，否则执行（3）；
+    如果CAS操作替换失败，说明有其他线程尝试获取该锁，则需要在释放锁的同时需要唤醒被挂起的线程。
+锁膨胀：
+    如果有线程（Thread-0）已经占有了轻量级锁，另一个线程（Thread-1）再次进入同步代码块，检测到对象的mark work的标识为00，则会发生锁膨胀，
+    将锁转变为重量级锁。为object申请Monitor锁，并让mark word指向Monitor，自己进入Monitor对象的entryList进行等待，此时Ower指向锁记录对象的对象引用
+    当Thread-1执行完同步代码块的代码，使用cas将Mark word的值恢复给对象头，此时会失败。这时为进入重量级解锁流程，按照Monitor地址找到Monitor对象，
+    将Owner设置为null，并唤醒EntryList中等待的线程。
+偏向锁失效的情况:
+    调用对象的hashcode，偏向锁对象markword中存储的是线程id，如果调用对象的hashcode会导致偏向锁被撤销
+    轻量级锁会在所记录中记录hashcode
+    重量级锁会在monitor中记录hashcode
+    撤销，当其它线程使用偏向锁对象时，会将偏向锁升级为轻量级锁
+批量重偏向
+    当对象被多个线程访问，但没有竞争，这时偏向线程T1的对象仍有机会重新偏向T2,重偏向会更改ThreadId的值，当撤销偏向锁超过20的时候，jvm会觉得，我是不是偏向错了那？
+    于是会再给这些对象加锁时重新偏向致加锁线程
+ThreadLocal的实现是这样的：
+每个Thread 维护一个 ThreadLocalMap 映射表，这个映射表的 key 是 ThreadLocal实例本身，value 是真正需要存储的 Object。
+3、也就是说 ThreadLocal 本身并不存储值，它只是作为一个 key 来让线程从 ThreadLocalMap 获取 value。值得注意的是图中的虚线，表示 ThreadLocalMap 是使用 ThreadLocal 的弱引用作为 Key 的，弱引用的对象在 GC 时会被回收。
+4、ThreadLocalMap使用ThreadLocal的弱引用作为key，如果一个ThreadLocal没有外部强引用来引用它，那么系统 GC 的时候，这个ThreadLocal势必会被回收，这样一来，ThreadLocalMap中就会出现key为null的Entry，就没有办法访问这些key为null的Entry的value，如果当前线程再迟迟不结束的话，这些key为null的Entry的value就会一直存在一条强引用链：Thread Ref -> Thread -> ThreaLocalMap -> Entry -> value永远无法回收，造成内存泄漏。
+5、总的来说就是，ThreadLocal里面使用了一个存在弱引用的map, map的类型是ThreadLocal.ThreadLocalMap.Map中的key为一个threadlocal实例。这个Map的确使用了弱引用，不过弱引用只是针对key。每个key都弱引用指向threadlocal。 当把threadlocal实例置为null以后，没有任何强引用指向threadlocal实例，所以threadlocal将会被gc回收。
+但是，我们的value却不能回收，而这块value永远不会被访问到了，所以存在着内存泄露。因为存在一条从current thread连接过来的强引用。只有当前thread结束以后，current thread就不会存在栈中，强引用断开，Current Thread、Map value将全部被GC回收。最好的做法是将调用threadlocal的remove方法，这也是等会后边要说的。
+6、其实，ThreadLocalMap的设计中已经考虑到这种情况，也加上了一些防护措施：在ThreadLocal的get(),set(),remove()的时候都会清除线程ThreadLocalMap里所有key为null的value。这一点在上一节中也讲到过！
+sleep&wait的区别
+①：sleep是Thread的方法（static native修饰的），而wait是Object的方法
+②：sleep不需要强制和synchronized配合使用，wait需要和synchronized一起用
+③：sleep在睡眠的时候，不会释放对象锁，但wait在等待的时候会释放对象
+hashtable：hashTable在构造函数中初始化对象，容量11，负载因子0.75，hashmap在第一次put元素的时候才初始化对象。容量默认16，负载因子0.75
+	hashtable中的方法都是同步的，就是被synchronized个标识的，hashtable继承的是direnary,hashmap继承的是abstrctHashMap
+ReentrantLock ①：可中断 ②：可以设置超时时间 ③：可以设置为公平锁 ④：支持多个条件变量    与synchronized一样，都支持可重入
+synchronized 只有一个watset空间，所有处于等待（wait）的线程都在watSet里面，
+ReentrantLock内部有好几个空间，专门用于等待（wait）状态的线程eg：Condition a = abc.newCondition();
+线程的6中状态，new,runnable,blocked,waiting,timed_waiting,terninated
+线程的优化使得每个线程读取公共资源时都去读取该线程中的私有内存导致了各个线程在操作共享资源时的不可见
+一旦变量加了volite关键字，各个现在在获取公共变量时就不能在优化机制的自身缓存中拿了，而是每次在访问公共的资源时都要去主存中去拿
+olite并不能保证修饰的变量是原子操作，它只是保证了被修饰变量在共享内存中的可见性，
+当a线程读取到count时，在原来的基础上+1后还没来得及读取到主存，b线程就已经把还没
+有更新过（+1）的count写到内存中，这样就和预想的结果不一样，所以volite并不是原子性操作
+synchronized关键字最主要有以下3种应用方式，下面分别介绍
+    修饰实例方法，作用于当前实例加锁，进入同步代码前要获得当前实例的锁
+    修饰静态方法，作用于当前类对象加锁，进入同步代码前要获得当前类对象的锁
+    修饰代码块，指定加锁对象，对给定对象加锁，进入同步代码库前要获得给定对象的锁。
+
+ 

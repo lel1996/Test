@@ -1,24 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20dcdf0a-432b-4df3-a26d-3c637b3a6640" name="Default Changelist" comment="GuardeObject之多个线程之间的交互优化">
-      <change afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lierlin/IO/IoDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lierlin/Resource/dhcc.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lierlin/Resource/java.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ABCABCABC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/HuoSuo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/Park.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ReenTrantLockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ReentrantLockABCABC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ReentrantLockTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/SisuoCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ZheXueJia.java" afterDir="false" />
+    <list default="true" id="20dcdf0a-432b-4df3-a26d-3c637b3a6640" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__error_error_unknown.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/VoliteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/Test.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/MapTest/MapTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Test/com/lierlin/MapTest/MapTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lierlin/MapTest/MapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lierlin/MapTest/MapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/IO/IoDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/Lamda.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/MapTest/MapTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/Resource/dhcc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/Resource/java.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/Resource/java.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/Resource/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/Resource/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/StreamTeset.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/Test$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/Test$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ABCABCABC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/GuardeObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/GuardeObject1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/HuoSuo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/Kuaizi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/MailBoxs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/Maipiao$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/Maipiao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/Park.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/PostMan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/Print.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ReenToAbc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ReenTrantLockTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ReentrantLockABCABC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ReentrantLockTest1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/Seil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/SisuoCheck$ThreadOne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/SisuoCheck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadLocalOne$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadLocalOne$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadLocalOne$Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadLocalOne$ThreadLocalThree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadLocalOne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadLocalThree$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadLocalThree$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadLocalThree$Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadLocalThree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadTest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadTest$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadTest$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ThreadTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/TransgerMoney.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/WaitAndSleep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/WaitNotifyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/YanJiuSheng.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ZheXueJia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ZhuanZhang$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ZhuanZhang$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/com/lierlin/ThreadTest/ZhuanZhang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/dhcc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/java.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test/jdbc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/IO/IoDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/IO/IoDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/Lamda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/Lamda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/MapTest/MapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/MapTest/MapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/Resource/dhcc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/Resource/dhcc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/Resource/java.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/Resource/jdbc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/StreamTeset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/StreamTeset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ABCABCABC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ABCABCABC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/GuardeObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/GuardeObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/HuoSuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/HuoSuo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/Maipiao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/Maipiao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/Park.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/Park.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ReenTrantLockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ReenTrantLockTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ReentrantLockABCABC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ReentrantLockABCABC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ReentrantLockTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ReentrantLockTest1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/SisuoCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/SisuoCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ThreadLocalOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ThreadLocalOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ThreadLocalThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ThreadLocalThree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ThreadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ThreadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/WaitAndSleep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/WaitAndSleep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/WaitNotifyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/WaitNotifyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ZheXueJia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ZheXueJia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ZhuanZhang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ZhuanZhang.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,44 +122,83 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/ABCABCABC.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ABCABCABC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="242">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/ReentrantLockABCABC.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ReentrantLockABCABC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="41" />
+            <state relative-caret-position="279">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1212#1213#0" expanded="true" />
                 <element signature="e#1248#1249#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/lierlin/Resource/dhcc.txt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ThreadTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-298">
-              <caret line="213" column="24" lean-forward="true" selection-start-line="213" selection-start-column="24" selection-end-line="213" selection-end-column="24" />
+            <state relative-caret-position="198">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#283#479#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/GuardeObject.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/WaitAndSleep.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="110" column="27" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="27" />
+            <state relative-caret-position="264">
+              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/Maipiao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="880">
+              <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1510#1511#0" expanded="true" />
+                <element signature="e#1535#1536#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/Resource/java.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/VoliteTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -149,13 +265,40 @@
         <option value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[20]有效的括号.md" />
         <option value="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ABCABCABC.java" />
         <option value="$PROJECT_DIR$/src/com/lierlin/ThreadTest/ReentrantLockABCABC.java" />
+        <option value="$PROJECT_DIR$/src/com/lierlin/ThreadTest/VoliteTest.java" />
         <option value="$PROJECT_DIR$/src/com/lierlin/Resource/dhcc.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ReentrantLockABCABC.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\maven\repository" />
+        <option name="mavenHome" value="E:/maven/apache-maven-3.3.9/bin" />
+        <option name="userSettingsFile" value="E:\maven\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Test" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Test" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -173,6 +316,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,73 +334,27 @@
               <item name="jdbcTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="jdbcTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lierlin" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jdbcTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="jdbcTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lierlin" type="462c0819:PsiDirectoryNode" />
-              <item name="IO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jdbcTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jdbcTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lierlin" type="462c0819:PsiDirectoryNode" />
-              <item name="Resource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jdbcTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jdbcTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lierlin" type="462c0819:PsiDirectoryNode" />
-              <item name="ThreadTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jdbcTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jdbcTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lierlin" type="462c0819:PsiDirectoryNode" />
-              <item name="ThreadTest" type="462c0819:PsiDirectoryNode" />
-              <item name="GuardeObject.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="jdbcTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="jdbcTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="jdbcTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jdbcTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jdbcTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="jdbcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
+              <item name="lierlin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,10 +362,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/lierlin/Resource" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="leetcode.id" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -289,7 +388,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GuardeObject">
+  <component name="RunManager" selected="Application.Run">
     <configuration name="ABCABCABC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lierlin.ThreadTest.ABCABCABC" />
       <module name="Test" />
@@ -329,19 +428,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Park" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lierlin.ThreadTest.Park" />
-      <module name="Test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lierlin.ThreadTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ReentrantLockABCABC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lierlin.ThreadTest.ReentrantLockABCABC" />
       <module name="Test" />
@@ -355,13 +441,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lierlin.ThreadTest.Run" />
+      <module name="Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lierlin.ThreadTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Run" />
         <item itemvalue="Application.GuardeObject" />
         <item itemvalue="Application.ReentrantLockABCABC" />
         <item itemvalue="Application.ABCABCABC" />
         <item itemvalue="Application.IoDemo" />
-        <item itemvalue="Application.Park" />
       </list>
     </recent_temporary>
   </component>
@@ -394,7 +493,9 @@
       <workItem from="1599136976647" duration="3333000" />
       <workItem from="1599221884203" duration="1858000" />
       <workItem from="1599283385220" duration="1650000" />
-      <workItem from="1599285080313" duration="11419000" />
+      <workItem from="1599285080313" duration="11500000" />
+      <workItem from="1599440862230" duration="3439000" />
+      <workItem from="1599467158748" duration="2571000" />
     </task>
     <task id="LOCAL-00001" summary="所有练习题目集合。">
       <created>1598518961171</created>
@@ -445,11 +546,25 @@
       <option name="project" value="LOCAL" />
       <updated>1598691360803</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="GuardeObject之多个线程之间的交互优化">
+      <created>1599308796774</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1599308796774</updated>
+    </task>
+    <task id="LOCAL-00009" summary="GuardeObject之多个线程之间的交互优化">
+      <created>1599308819215</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1599308819215</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74946000" />
+    <option name="totallyTimeSpent" value="81037000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -463,18 +578,16 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.57932013" visible="true" weight="0.31903484" />
-      <window_info id="Structure" order="1" sideWeight="0.4206799" side_tool="true" visible="true" weight="0.31903484" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.57758623" visible="true" weight="0.2680965" />
+      <window_info id="Structure" order="1" sideWeight="0.4224138" side_tool="true" weight="0.32372653" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Sequence" weight="0.7634561" />
-      <window_info anchor="bottom" id="Stack trace to UML" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20538244" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40651557" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30169973" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -485,10 +598,45 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.5694051" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5650134" side_tool="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
-      <window_info anchor="right" x="956" y="197" width="492" height="514" id="leetcode" side_tool="true" type="WINDOWED" weight="0.3297587" />
-      <window_info anchor="right" id="jclasslib" weight="0.57841825" />
-      <window_info anchor="right" id="Word Book" side_tool="true" weight="0.3297587" />
-      <window_info anchor="right" id="Translation Assistant" weight="0.3297587" />
+      <window_info anchor="bottom" id="Sequence" order="13" weight="0.7634561" />
+      <window_info anchor="bottom" id="Stack trace to UML" order="14" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3297587" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.31032172" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" x="956" y="197" width="492" height="514" id="leetcode" order="9" side_tool="true" type="WINDOWED" weight="0.3297587" />
+      <window_info anchor="right" id="jclasslib" order="10" weight="0.57841825" />
+      <window_info anchor="right" id="Translation Assistant" order="11" weight="0.3297587" />
+      <window_info anchor="right" id="Word Book" order="12" side_tool="true" weight="0.3297587" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.57758623" visible="true" weight="0.32372653" />
+      <window_info id="Structure" order="1" sideWeight="0.4224138" side_tool="true" visible="true" weight="0.32372653" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17847025" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30169973" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4349866" weight="0.34560907" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.5694051" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5650134" side_tool="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="Sequence" order="13" weight="0.7634561" />
+      <window_info anchor="bottom" id="Stack trace to UML" order="14" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -498,7 +646,11 @@
       <window_info anchor="right" id="Maven" order="6" weight="0.3297587" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout>
+      <window_info anchor="right" x="956" y="197" width="492" height="514" id="leetcode" order="9" side_tool="true" type="WINDOWED" weight="0.3297587" />
+      <window_info anchor="right" id="jclasslib" order="10" weight="0.57841825" />
+      <window_info anchor="right" id="Translation Assistant" order="11" weight="0.3297587" />
+      <window_info anchor="right" id="Word Book" order="12" side_tool="true" weight="0.3297587" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -564,20 +716,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Java/jdk1.8.0_151/src.zip!/java/sql/Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Desktop/mysql-connector-java-5.1.39-bin.jar!/com/mysql/jdbc/Driver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lierlin/TuoMin.java" />
     <entry file="jar://D:/Java/jdk1.8.0_151/src.zip!/java/util/Properties.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -586,7 +724,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/Resource/jdbc.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/Resource/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
@@ -625,7 +763,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/Lamda.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/Lamda.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
@@ -635,14 +773,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="85" column="33" lean-forward="true" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/StreamTeset.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/StreamTeset.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
@@ -687,7 +825,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/ThreadLocalThree.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ThreadLocalThree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -698,24 +836,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/ThreadTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/ZhuanZhang.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ZhuanZhang.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
@@ -742,17 +870,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/WaitNotifyTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/WaitNotifyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/WaitAndSleep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -802,59 +923,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/ThreadLocalOne.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ThreadLocalOne.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/Maipiao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-          <folding>
-            <element signature="e#1510#1511#0" expanded="true" />
-            <element signature="e#1535#1536#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/SisuoCheck$ThreadOne.class" />
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/Resource/java.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1782" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/SisuoCheck.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/SisuoCheck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/Park.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/Park.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/HuoSuo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/HuoSuo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/ZheXueJia.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ZheXueJia.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/ReenTrantLockTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ReenTrantLockTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
@@ -868,7 +973,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/MapTest/MapTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/MapTest/MapTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
@@ -878,7 +983,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/ReentrantLockTest1.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ReentrantLockTest1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
@@ -917,7 +1022,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/IO/IoDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/IO/IoDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
@@ -938,38 +1043,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/ABCABCABC.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/GuardeObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        <state relative-caret-position="1577">
+          <caret line="99" column="34" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/ReentrantLockABCABC.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/Resource/java.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/Resource/dhcc.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="3471">
+          <caret line="230" column="30" selection-start-line="230" selection-start-column="22" selection-end-line="230" selection-end-column="30" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-4576">
+            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/Maipiao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="41" />
+        <state relative-caret-position="880">
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+          <folding>
+            <element signature="e#1510#1511#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/VoliteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ABCABCABC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ReentrantLockABCABC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1212#1213#0" expanded="true" />
             <element signature="e#1248#1249#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/ThreadTest/GuardeObject.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/ThreadTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="110" column="27" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="27" />
+        <state relative-caret-position="198">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#283#479#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lierlin/Resource/dhcc.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lierlin/ThreadTest/WaitAndSleep.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="213" column="24" lean-forward="true" selection-start-line="213" selection-start-column="24" selection-end-line="213" selection-end-column="24" />
+        <state relative-caret-position="264">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1029,6 +1190,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
