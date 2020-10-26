@@ -5,8 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.Vector;
-
-
+import java.util.concurrent.FutureTask;
 
 
 public class Maipiao {
@@ -17,6 +16,7 @@ public class Maipiao {
 	 */
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
+		//FutureTask
 		Date date=new Date();
 		int b=date.getHours()+date.getSeconds();
 		int data = 0;

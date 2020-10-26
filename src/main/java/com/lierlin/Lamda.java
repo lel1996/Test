@@ -17,7 +17,7 @@ public class Lamda {
 };*/
 //Consumer<Double> consumer = t->System.out.println("xiaofeile "+t);
  a(t->System.out.println("xiaofeile "+t),1000);
-int [] arr = getNums(()->new Random().nextInt(100),5);
+        int [] arr = getNums(()->new Random().nextInt(100),5);
  System.out.println(Arrays.toString(arr));
  //System.out.println(handlerString(S-> s().trim()),"zhangsna    ");
 

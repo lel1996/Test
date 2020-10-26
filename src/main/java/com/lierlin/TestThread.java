@@ -1,13 +1,14 @@
 package com.lierlin;
 
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
-
-
-public class Test {
+@Slf4j(topic = "TestThread")
+public class TestThread {
 	static Object lock = new Object();
 	static int count = 0;
 
@@ -21,6 +22,7 @@ public class Test {
 		ThreadLocal<String> to = new ThreadLocal<String>();
 		//to.set("lierlin");
 		System.out.println("to.get() is"+to.get());
+		log.debug("running");
 		Map map= new HashMap();
 		Map map1= new ConcurrentHashMap();
 		map.put("leirlin", 123);
@@ -32,6 +34,7 @@ public class Test {
 			b--;
 			a=10;
 		}
+		Thread.interrupted();
 		System.out.print(a);
 		
 	
