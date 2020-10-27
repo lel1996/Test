@@ -28,7 +28,7 @@ public class JoinTest {
         long start = System.currentTimeMillis();
         t1.start();
         t2.start();
-        t2.join();
+        t2.join();//等t2执行完才能执行主程序
         t1.join();
 
         long end = System.currentTimeMillis();

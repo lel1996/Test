@@ -10,9 +10,9 @@ public class WaitNotifyTest {
                     lock.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
+        }
                 System.out.println("其它代码执行了........");
-            }
+    }
         }).start();
 
         new Thread(()->{
