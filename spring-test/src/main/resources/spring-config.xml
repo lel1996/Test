@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+<!--<context:annotation-config/>这样一条配置，他的作用是式地向 Spring 容器注册
+AutowiredAnnotationBeanPostProcessor、CommonAnnotationBeanPostProcessor、
+PersistenceAnnotationBeanPostProcessor 以及 RequiredAnnotationBeanPostProcessor 这 4 个BeanPostProcessor。
+注册这4个 BeanPostProcessor的作用，就是为了你的系统能够识别相应的注解。-->
+    <context:annotation-config/>
+
+    <!--<context:component-scan /> 除了具有context:annotation-config的功能之外，
+    <context:component-scan />还可以在指定的package下扫描以及注册javabean 。
+    还具有自动将带有@component,@service,@Repository等注解的对象注册到spring容
+    器中的功能。因此当使用 <context:component-scan />后，就可以将 <context:annotation-config />移除。-->
+    <context:component-scan base-package="com.lierlin"/>
+</beans>

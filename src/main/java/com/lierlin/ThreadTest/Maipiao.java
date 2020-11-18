@@ -23,7 +23,7 @@ public class Maipiao {
 		List<Thread> thradList = new ArrayList<Thread>();
 		final List<Integer> list =new Vector<Integer>();
 		 final Seil aa = new Seil(2000);
-		for (int i=0;i<5000;i++) {
+		for (int i=0;i<1000;i++) {
 			 Thread thread = new Thread(new Runnable() {
 				
 				@Override

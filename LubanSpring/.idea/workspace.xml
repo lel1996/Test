@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99495727-7094-400c-a36f-7a34061f1589" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fgBOFkEsxqwklZJquEjEVWO7Z1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Luban-Spring-Study" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.luban.Test" />
+      <module name="LubanSpring" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1596634590247">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="120" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1596634590247" />
+    <state x="553" y="279" width="429" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1596633814703">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="553" y="279" width="429" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1596633814703" />
+    <state width="666" height="466" key="DebuggerActiveHint" timestamp="1596634760054">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="666" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1596634760054" />
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1596631090795">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596631090795" />
+    <state width="1493" height="222" key="GridCell.Tab.0.bottom" timestamp="1596635459418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596635459418" />
+    <state width="1493" height="222" key="GridCell.Tab.0.center" timestamp="1596635459418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596635459418" />
+    <state width="1493" height="222" key="GridCell.Tab.0.left" timestamp="1596635459418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596635459418" />
+    <state width="1493" height="222" key="GridCell.Tab.0.right" timestamp="1596635459418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596635459418" />
+    <state width="1493" height="222" key="GridCell.Tab.1.bottom" timestamp="1596635459419">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596635459419" />
+    <state width="1493" height="222" key="GridCell.Tab.1.center" timestamp="1596635459418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596635459418" />
+    <state width="1493" height="222" key="GridCell.Tab.1.left" timestamp="1596635459418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596635459418" />
+    <state width="1493" height="222" key="GridCell.Tab.1.right" timestamp="1596635459418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596635459418" />
+    <state x="499" y="172" key="extract.method.dialog" timestamp="1596632318717">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="172" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1596632318717" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596631919216">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596631919216" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring/LubanApplicationContext.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

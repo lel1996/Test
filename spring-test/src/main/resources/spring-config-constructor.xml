@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--配置bean,配置后该类由spring管理-->
+    <bean name="springAction" class="com.beanInsert.constructor.SpringAction">
+        <!--(2)创建构造器注入,如果主类有带参的构造方法则需添加此配置-->
+        <constructor-arg ref="springDao"></constructor-arg>
+        <constructor-arg ref="user"></constructor-arg>
+    </bean>
+    <!--解决构造方法参数的不确定性：你可能会遇到构造方法传入的两参数都是同类型的，为了分清哪个该赋对应值，则需要进行一些小处理：
+        下面是设置index，就是参数位置：-->
+    <!--<bean name="springAction" class="com.bless.springdemo.action.SpringAction">
+        <constructor-arg index="0" ref="springDao"></constructor-arg>
+        <constructor-arg index="1" ref="user"></constructor-arg>
+        </bean> -->
+    <!--
+            <constructor-arg type="java.lang.String" ref=""/>  参数类型
+    -->
+    <bean name="springDao" class="com.beanInsert.constructor.SpringDaoImpl"></bean>
+    <bean name="user" class="com.beanInsert.constructor.User"></bean>
+</beans>

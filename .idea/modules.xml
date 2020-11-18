@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/LubanSpring/LubanSpring.iml" filepath="$PROJECT_DIR$/LubanSpring/LubanSpring.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test.iml" filepath="$PROJECT_DIR$/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aop-test/aop-test.iml" filepath="$PROJECT_DIR$/aop-test/aop-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poi/poi.iml" filepath="$PROJECT_DIR$/poi/poi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-test/springtest.iml" filepath="$PROJECT_DIR$/spring-test/springtest.iml" />
     </modules>
   </component>
 </project>

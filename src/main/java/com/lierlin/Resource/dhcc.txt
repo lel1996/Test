@@ -247,3 +247,119 @@ AtomincStampedReference可以给原子引用加上版本号追踪原子引用整个的变化过程，如A->
 但有些时候，并不关心引用变量更改了几次，只是单纯的关心是否更改过，所以就有了AtomicMarkableReference
 static变量随着类的加载而加载被static修饰的变量在堆中，其它的方法每次调用被static修饰的变量时都要去堆中去拿，如果
 加上final就会把static变量放到方法的栈中这就是static int a和final static int a的区别（如果final static 修饰的变量值大于int的范围时会放到常量池中效率也是比堆中高）
+rabbitMq几个概念说明
+Broker: 消息交换机 指定消息按什么规则，路由到哪个队列
+Exchange:消息交换机，它指定消息按什么规则，路由到哪个队列。
+Queue: 消息队列载体，每个消息都会被投入到一个或多个队列
+Binding:绑定，它的作用就是将exchange 和queue进行绑定起来
+Routing Key: 路由关键字，exchange根据这个关键字进行消息传递
+vhost:虚拟主机，一个broker里可以开设多个vhost,用作不同用户的权限分离
+producer:消息的投递者
+consumer:消息的接收者
+channel:消息通道，在客户端的每个连接里，可建立多个channel,每个channel代表一个会话任务。
+消息队列的使用过程大概如下：
+1.客户端连接消息队列服务器，打开一个channel。
+2.客户端声明一个exchange, 并设置相关属性。
+3.客户端声明一个queue，并设置相关属性。
+4.客户端设置好route key，在exchange和queue之间建立好绑定关系。
+5.客户端投递消息到exchange.
+交换机的四种模式：
+1.direct(直连交换机)：根据routekey 将消息投递给对应队列的； 转发消息到route key 指定的队列上
+2.topic（主题交换机）：对key进行模式匹配，比如ab 可以传到所有的ab的queue
+3.headers:（头交换机）：转发到headers中的键值对完全匹配的队列。性能比较差不建议使用。
+4.fanout:（扇形交换机）：转发消息到所有绑定队列，忽略routingkey
+交换价的属性：
+1.持久性：durable,如果启用，交换器将会在server重启前都有效。
+2.自动删除：如果启用，那么交换器将会在其绑定的队列都被删除掉之后自动删除掉自身。
+3.惰性：如果没有声明交换器，那么在执行到使用的时候会导致异常，并不会主动声明。
+一个交换机可以绑定多个队列，一个队列也可以绑定到多个交换机上。如果没有队列绑定到交换机上，则发送到该交换机上的消息会丢失。
+public native int hashCode();
+public bollean equals(Object obj){
+return (this==obj)
+}
+BeanFactory和ApplicationContext有什么区别？
+        BeanFactory和ApplicationContext是Spring的两大核心接口，都可以当做Spring的容器。其中ApplicationContext是BeanFactory的子接口。
+（1）BeanFactory：是Spring里面最底层的接口，包含了各种Bean的定义，读取bean配置文档，管理bean的加载、实例化，控制bean的生命周期，维护bean之间的依赖关系。ApplicationContext接口作为BeanFactory的派生，除了提供BeanFactory所具有的功能外，还提供了更完整的框架功能：
+①继承MessageSource，因此支持国际化。
+②统一的资源文件访问方式。
+③提供在监听器中注册bean的事件。
+④同时加载多个配置文件。
+⑤载入多个（有继承关系）上下文 ，使得每一个上下文都专注于一个特定的层次，比如应用的web层。
+（2）①BeanFactroy采用的是延迟加载形式来注入Bean的，即只有在使用到某个Bean时(调用getBean())，才对该Bean进行加载实例化。这样，我们就不能发现一些存在的Spring的配置问题。如果Bean的某一个属性没有注入，BeanFacotry加载后，直至第一次使用调用getBean方法才会抛出异常。
+     ②ApplicationContext，它是在容器启动时，一次性创建了所有的Bean。这样，在容器启动时，我们就可以发现Spring中存在的配置错误，这样有利于检查所依赖属性是否注入。 ApplicationContext启动后预载入所有的单实例Bean，通过预载入单实例bean ,确保当你需要的时候，你就不用等待，因为它们已经创建好了。
+     ③相对于基本的BeanFactory，ApplicationContext 唯一的不足是占用内存空间。当应用程序配置Bean较多时，程序启动较慢。
+（3）BeanFactory通常以编程的方式被创建，ApplicationContext还能以声明的方式创建，如使用ContextLoader。
+（4）BeanFactory和ApplicationContext都支持BeanPostProcessor、BeanFactoryPostProcessor的使用，但两者之间的区别是：BeanFactory需要手动注册，而ApplicationContext则是自动注册。
+请解释Spring Bean的生命周期？
+ 首先说一下Servlet的生命周期：实例化，初始init，接收请求service，销毁destroy；
+ Spring上下文中的Bean生命周期也类似，如下：
+（1）实例化Bean：
+对于BeanFactory容器，当客户向容器请求一个尚未初始化的bean时，或初始化bean的时候需要注入另一个尚未初始化的依赖时，容器就会调用createBean进行实例化。对于ApplicationContext容器，当容器启动结束后，通过获取BeanDefinition对象中的信息，实例化所有的bean。
+（2）设置对象属性（依赖注入）：
+实例化后的对象被封装在BeanWrapper对象中，紧接着，Spring根据BeanDefinition中的信息 以及 通过BeanWrapper提供的设置属性的接口完成依赖注入。
+（3）处理Aware接口：
+接着，Spring会检测该对象是否实现了xxxAware接口，并将相关的xxxAware实例注入给Bean：
+①如果这个Bean已经实现了BeanNameAware接口，会调用它实现的setBeanName(String beanId)方法，此处传递的就是Spring配置文件中Bean的id值；
+②如果这个Bean已经实现了BeanFactoryAware接口，会调用它实现的setBeanFactory()方法，传递的是Spring工厂自身。
+③如果这个Bean已经实现了ApplicationContextAware接口，会调用setApplicationContext(ApplicationContext)方法，传入Spring上下文；
+（4）BeanPostProcessor：
+如果想对Bean进行一些自定义的处理，那么可以让Bean实现了BeanPostProcessor接口，那将会调用postProcessBeforeInitialization(Object obj, String s)方法。
+（5）InitializingBean 与 init-method：
+如果Bean在Spring配置文件中配置了 init-method 属性，则会自动调用其配置的初始化方法。
+（6）如果这个Bean实现了BeanPostProcessor接口，将会调用postProcessAfterInitialization(Object obj, String s)方法；由于这个方法是在Bean初始化结束时调用的，所以可以被应用于内存或缓存技术；
+以上几个步骤完成后，Bean就已经被正确创建了，之后就可以使用这个Bean了。
+（7）DisposableBean：
+当Bean不再需要时，会经过清理阶段，如果Bean实现了DisposableBean这个接口，会调用其实现的destroy()方法；
+（8）destroy-method：
+最后，如果这个Bean的Spring配置中配置了destroy-method属性，会自动调用其配置的销毁方法。
+Spring基于xml注入bean的几种方式：
+（1）Set方法注入；
+（2）构造器注入：①通过index设置参数的位置；②通过type设置参数类型；
+（3）静态工厂注入；
+（4）实例工厂；
+在使用@Autowired注解之前需要在Spring配置文件进行配置，<context:annotation-config />。
+在启动spring IoC时，容器自动装载了一个AutowiredAnnotationBeanPostProcessor后置处理器，
+当容器扫描到@Autowied、@Resource或@Inject时，就会在IoC容器自动查找需要的bean，
+并装配给该对象的属性。在使用@Autowired时，首先在容器中查询对应类型的bean：、
+Spring 框架中都用到了哪些设计模式？
+（1）工厂模式：BeanFactory就是简单工厂模式的体现，用来创建对象的实例；
+（2）单例模式：Bean默认为单例模式。
+（3）代理模式：Spring的AOP功能用到了JDK的动态代理和CGLIB字节码生成技术；
+（4）模板方法：用来解决代码重复的问题。比如. RestTemplate, JmsTemplate, JpaTemplate。
+（5）观察者模式：定义对象键一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都会得到通知被制动更新，
+                 如Spring中listener的实现--ApplicationListener。
+Spring事务的种类：
+spring支持编程式事务管理和声明式事务管理两种方式：
+①编程式事务管理使用TransactionTemplate。
+②声明式事务管理建立在AOP之上的。其本质是通过AOP功能，对方法前后进行拦截，将事务处理的功能编织到拦截的方法中，
+  也就是在目标方法开始之前加入一个事务，在执行完目标方法之后根据执行情况提交或者回滚事务。
+  --------------------------------------------------------------------------------------------------------------
+  声明式事务最大的优点就是不需要在业务逻辑代码中掺杂事务管理的代码，只需在配置文件中做相关的事务规则声明或通过@Transactional注解的方式
+  ，便可以将事务规则应用到业务逻辑中。  声明式事务管理要优于编程式事务管理，这正是spring倡导的非侵入式的开发方式，使业务代码不受污染，
+  只要加上注解就可以获得完全的事务支持。唯一不足地方是，最细粒度只能作用到方法级别，无法做到像编程式事务那样可以作用到代码块级别。
+同一个aspect，不同advice的执行顺序：
+
+①没有异常情况下的执行顺序：
+
+around before advice
+before advice
+target method 执行
+around after advice
+after advice
+afterReturning
+
+②有异常情况下的执行顺序：
+
+around before advice
+before advice
+target method 执行
+around after advice
+after advice
+afterThrowing:异常发生
+java.lang.RuntimeException: 异常发生
+AOP应用场景
+场景一： 记录日志
+场景二： 监控方法运行时间 （监控性能）
+场景三： 权限控制
+场景四： 缓存优化 （第一次调用查询数据库，将查询结果放入内存对象， 第二次调用， 直接从内存对象返回，不需要查询数据库 ）
+场景五： 事务管理 （调用方法前开启事务， 调用方法后提交关闭事务 ）

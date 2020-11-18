@@ -3,7 +3,7 @@ package com.lierlin.ThreadTest;
 public class ThreadLocalOne {
      volatile Person person=new Person();
  //如果加上synchronized结果正确，不加结果错误
-     public  synchronized String setAndGet(String name){
+     public   String setAndGet(String name){
           //System.out.print(Thread.currentThread().getName()+":");
            person.name=name;
            //模拟网络延迟
